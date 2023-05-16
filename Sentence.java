@@ -96,4 +96,40 @@ class Sentence {
         }
         return true;
     }
+
+    public String getLetters ()
+    {
+        if (sentence == null){
+            System.out.println ("ERROR in Sentence.length(): No sentence set");
+            return "@";
+        }
+
+        String letters = "";
+        for (int i=0; i<length(); i++) {
+            char c = sentence.charAt(i);
+            if (Character.isLetter(c)) {
+                letters += Character.toLowerCase(c);
+            }
+        }
+        return letters;
+    }
+
+    public String getLettersSorted ()
+    {
+        char[] chars = getLetters().toCharArray();
+        Arrays.sort (chars);
+
+        return String.copyValueOf(chars);
+    }
+
+    public boolean isAnagram (Sentence other)
+    {
+        String thisSentence = getLettersSorted ();
+        String otherSentence = other.getLettersSorted ();
+
+        if (thisSentence.equals(otherSentence)) {
+            return true;
+        }
+        return false;
+    }
 }
