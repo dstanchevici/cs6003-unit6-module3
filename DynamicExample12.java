@@ -35,8 +35,7 @@ public class DynamicExample12 {
         System.out.println (x);
         */
 
-        ObjX12 x;
-        x = new ObjX12 ("Ms.X");
+        ObjX12 x = new ObjX12 ("Ms.X");
         System.out.println (x);
 
         x = new ObjX12 ("Ms. X", 5);
