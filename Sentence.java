@@ -4,6 +4,18 @@ class Sentence {
 
     private String sentence;
 
+    // constructors
+
+    public Sentence (String s)
+    {
+        sentence = s; // Initialized with the parameter
+    }
+
+    public Sentence ()
+    {
+        // No action
+        // Initialized thru set (String s)
+    }
     public void set (String s)
     {
         sentence = s;
